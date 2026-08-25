@@ -5,23 +5,23 @@
 class Tack < Formula
   desc "Configuration management and system bootstrapping tool inspired by Ansible"
   homepage "https://github.com/tackhq/tack"
-  version "1.0.64"
+  version "1.0.65"
   license "MIT"
 
   depends_on "go" => :optional
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/tackhq/tack/releases/download/v1.0.64/tack_1.0.64_darwin_amd64.tar.gz"
-      sha256 "7d2621bc067db20df8dcea1d6a81b910d1b6c4c1bbeea0ff77e1c89e0599511c"
+      url "https://github.com/tackhq/tack/releases/download/v1.0.65/tack_1.0.65_darwin_amd64.tar.gz"
+      sha256 "5e2dde9a836b1a1bd6c4f7f6e5c678eef58f090a2b5d538b4d8c72255c81aaef"
 
       define_method(:install) do
         bin.install "tack"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/tackhq/tack/releases/download/v1.0.64/tack_1.0.64_darwin_arm64.tar.gz"
-      sha256 "77781148b4b6e237bcb2513a4af18dbec71c542424b6622528ec1f8a54760707"
+      url "https://github.com/tackhq/tack/releases/download/v1.0.65/tack_1.0.65_darwin_arm64.tar.gz"
+      sha256 "0e7ecbe1782d6c33e29f151e47b38d105fcf89ab5d50ef8bbd1d2e8ee22cd8d7"
 
       define_method(:install) do
         bin.install "tack"
@@ -31,15 +31,15 @@ class Tack < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tackhq/tack/releases/download/v1.0.64/tack_1.0.64_linux_amd64.tar.gz"
-      sha256 "06a6ad2a98e2e3ae4822b853248c9ccc7d7dc1920a489363669e99506fca8e3b"
+      url "https://github.com/tackhq/tack/releases/download/v1.0.65/tack_1.0.65_linux_amd64.tar.gz"
+      sha256 "070d6d4fb462b79ee2c0f2ec5caed94c861fb98b4753ecf076821d50e006db76"
       define_method(:install) do
         bin.install "tack"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tackhq/tack/releases/download/v1.0.64/tack_1.0.64_linux_arm64.tar.gz"
-      sha256 "d2624867f421fb6b2e737a16eece632aa33041ddc75aaa7d94db281fe9931e86"
+      url "https://github.com/tackhq/tack/releases/download/v1.0.65/tack_1.0.65_linux_arm64.tar.gz"
+      sha256 "196ecc25ba378bb98405f5b37686a50635f40622216bf2ddabfef2ae908d655a"
       define_method(:install) do
         bin.install "tack"
       end
